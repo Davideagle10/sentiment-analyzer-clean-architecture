@@ -237,7 +237,7 @@ class ConsoleDisplay(DisplayInterface):
               f"{Fore.WHITE}({result.score:.2f}) - {result.description}")
     
     def show_error(self, error: str):
-        print(f"{Fore.RED}❌ Error: {error}")
+        print(f"{Fore.RED} Error: {error}")
     
     def show_welcome(self):
         print(f"\n{Fore.CYAN}{'='*50}")
@@ -318,7 +318,7 @@ class SentimentAnalysisApp:
     def _shutdown(self):
         """Apaga la aplicación gracefulmente"""
         self.running = False
-        print(f"\n{Fore.GREEN}👋 ¡Hasta luego! Gracias por usar el analizador.")
+        print(f"\n{Fore.GREEN} Adios, Gracias por usar el analizador.")
 
 #  FÁBRICA PARA CREAR LA APP 
 class AppFactory:
@@ -346,7 +346,7 @@ def handle_global_exception(exc_type, exc_value, exc_traceback):
         return
     
     logger.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
-    print(f"{Fore.RED}❌ Error crítico: {exc_value}")
+    print(f"{Fore.RED}Error crítico: {exc_value}")
 
 # EJECUCIÓN PRINCIPAL 
 if __name__ == "__main__":
@@ -360,5 +360,5 @@ if __name__ == "__main__":
     except Exception as e:
         logger.critical(f"Error crítico al iniciar la aplicación: {e}")
         print(f"{Fore.RED}No se pudo iniciar la aplicación: {e}")
-        print(f"{Fore.YELLOW}Asegúrate de tener configurada la variable OPENAI_API_KEY en el archivo .env")
+        print(f"{Fore.YELLOW}Asegurarse de tener configurada la variable OPENAI_API_KEY en el archivo .env")
         sys.exit(1)
