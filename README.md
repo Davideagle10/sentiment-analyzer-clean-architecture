@@ -16,21 +16,6 @@ This project demonstrates professional-grade architecture, dependency injection,
 - **Unit Testing:** Includes tests to ensure consistency and reliability.
 - **OpenAI Integration:** Abstracted GPT-powered sentiment analysis.
 
----
-
-## Project Structure
-
-├── config
-│ ├── init.py
-│ └── config_manager.py # Configuration and environment validation (Pydantic)
-├── sentiment_analyzer.py # Core logic, OpenAI integration, clean design
-├── tests
-│ ├── init.py
-│ └── test_analyzer.py # Unit tests for core functionality
-├── requirements.txt # Dependencies
-├── .gitignore # Git exclusions
-└── README.md # Project documentation
-
 
 ---
 
